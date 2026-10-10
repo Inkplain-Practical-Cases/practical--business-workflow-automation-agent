@@ -2,7 +2,7 @@
   "version": "1.0",
   "name": "Workflow STEP-1",
   "source": {
-    "revision": "step-02-implement-typed-mcp-tool-registry"
+    "revision": "step-03-connect-mcp-client-to-tool-service"
   },
   "flows": [
     {
@@ -11,11 +11,11 @@
     }
   ],
   "step": {
-    "no": 2,
+    "no": 3,
     "of": 6,
-    "title": "Add provider boundary",
-    "branch": "step-02-implement-typed-mcp-tool-registry",
-    "previous": "STEP-1.crd",
+    "title": "Add core domain state",
+    "branch": "step-03-connect-mcp-client-to-tool-service",
+    "previous": "STEP-2.crd",
     "removed": []
   },
   "components": [
@@ -191,7 +191,7 @@
       "attributes": {
         "step_note": "Calls an injected or deterministic provider instead of acknowledging input."
       },
-      "step_change": "changed"
+      "step_change": "unchanged"
     },
     {
       "id": "be.domain_provider",
@@ -230,6 +230,34 @@
           "description": "domain result"
         }
       ],
+      "attributes": {},
+      "step_change": "unchanged"
+    },
+    {
+      "id": "be.step3_domain",
+      "name": "step3_domain",
+      "kind": "function",
+      "side": "backend",
+      "layer": "provider",
+      "description": "STEP-3 adds an allowlisted typed client adapter; live MCP transport and execution permissions remain future tasks.",
+      "flows": [
+        "workflows"
+      ],
+      "source": {
+        "file": "app/features/workflows/providers/mcp_client.py",
+        "symbol": "domain operation",
+        "lines": [
+          1,
+          45
+        ]
+      },
+      "owner": "workflows",
+      "component_reason": "Separately executable persistence/business unit",
+      "status": "observed",
+      "inputs": [],
+      "validations": [],
+      "operations": [],
+      "outputs": [],
       "attributes": {},
       "step_change": "added"
     }
