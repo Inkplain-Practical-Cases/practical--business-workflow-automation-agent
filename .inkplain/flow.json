@@ -4,7 +4,7 @@
     "slug": "business-workflow-automation-agent",
     "name": "Business Workflow Automation Agent"
   },
-  "current": "content",
+  "current": "done",
   "stages": {
     "intro": {
       "status": "done",
@@ -59,16 +59,23 @@
       "updated_by": "api-key:for-chatgpt-test-2"
     },
     "content": {
-      "status": "in_progress",
-      "summary": "Eight categories created. Portal lessons still being authored and checked.",
+      "status": "done",
+      "summary": "Portal Stage 4 completed: 8 active categories and 45 active case lessons (18 Overview with 16 source-backed What-is, 6 STEP categories x 4 items, 3 Conclusion). Structural MCP read-back confirmed counts and six INKP tabs with no missing executor links; representative lessons inspected for CRD, source-code, GitHub and 4M content. Production-integration limitations remain explicit in tutorials.",
       "outputs": {
         "categories_created": 8,
-        "items_target": 45
+        "items_target": 45,
+        "portal_url": "/practical-case/business-workflow-automation-agent",
+        "categories": 8,
+        "items": 45,
+        "step_items": 24,
+        "theory_items": 16,
+        "conclusion_items": 3,
+        "structural_qa": true
       },
       "started_at": "2026-10-10T07:51:02.023Z",
-      "finished_at": null,
+      "finished_at": "2026-10-10T10:14:32.841Z",
       "updated_by": "api-key:for-chatgpt-test-2"
     }
   },
-  "updated_at": "2026-10-10T07:51:02.023Z"
+  "updated_at": "2026-10-10T10:14:32.841Z"
 }
