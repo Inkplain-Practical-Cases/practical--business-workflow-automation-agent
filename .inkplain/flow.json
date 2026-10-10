@@ -34,7 +34,27 @@
       "started_at": "2026-10-10T06:54:39.971Z",
       "finished_at": "2026-10-10T07:34:29.923Z",
       "updated_by": "api-key:for-chatgpt-test-2"
+    },
+    "inkp": {
+      "status": "done",
+      "summary": "Six ordered Simulator STEP tabs committed on main; Process Executor links checked by get_inkp_summary with zero missing linked docs.",
+      "outputs": {
+        "inkp_path": "business-workflow-automation-agent.inkp",
+        "inkp_url": "https://github.com/Inkplain-Practical-Cases/practical--business-workflow-automation-agent/blob/main/business-workflow-automation-agent.inkp",
+        "tabs": [
+          "STEP-1",
+          "STEP-2",
+          "STEP-3",
+          "STEP-4",
+          "STEP-5",
+          "STEP-6"
+        ],
+        "linked_docs_verified": 33
+      },
+      "started_at": "2026-10-10T07:42:50.749Z",
+      "finished_at": "2026-10-10T07:42:50.749Z",
+      "updated_by": "api-key:for-chatgpt-test-2"
     }
   },
-  "updated_at": "2026-10-10T07:34:29.923Z"
+  "updated_at": "2026-10-10T07:42:50.749Z"
 }
