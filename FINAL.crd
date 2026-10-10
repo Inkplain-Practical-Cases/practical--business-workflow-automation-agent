@@ -2,7 +2,7 @@
   "version": "1.0",
   "name": "Workflow STEP-1",
   "source": {
-    "revision": "step-06-verify-workflow-observability-and-ci"
+    "revision": "main"
   },
   "flows": [
     {
@@ -11,11 +11,11 @@
     }
   ],
   "step": {
-    "no": 6,
+    "no": "final",
     "of": 6,
-    "title": "Harden and integrate domain capabilities",
-    "branch": "step-06-verify-workflow-observability-and-ci",
-    "previous": "STEP-5.crd",
+    "title": "Final workflow",
+    "branch": "main",
+    "previous": "STEP-6.crd",
     "removed": []
   },
   "components": [
@@ -343,7 +343,7 @@
       "operations": [],
       "outputs": [],
       "attributes": {},
-      "step_change": "added"
+      "step_change": "unchanged"
     }
   ],
   "dependencies": [],
