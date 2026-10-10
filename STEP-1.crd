@@ -1,0 +1,183 @@
+{
+  "version": "1.0",
+  "name": "Workflow STEP-1",
+  "source": {
+    "revision": "step-01"
+  },
+  "flows": [
+    {
+      "id": "workflows",
+      "name": "Workflow request"
+    }
+  ],
+  "step": {
+    "no": 1,
+    "of": 6,
+    "title": "Receive validated workflow requests",
+    "branch": "step-01",
+    "previous": null,
+    "removed": []
+  },
+  "components": [
+    {
+      "id": "be.receive_workflow",
+      "name": "receive_workflow",
+      "kind": "function",
+      "side": "backend",
+      "layer": "door",
+      "description": "STEP-1 receive_workflow component",
+      "flows": [
+        "workflows"
+      ],
+      "source": {
+        "file": "app/features/workflows/router.py",
+        "symbol": "receive_workflow",
+        "revision": "step-01",
+        "lines": [
+          1,
+          45
+        ]
+      },
+      "owner": "workflows",
+      "component_reason": "Typed independent boundary",
+      "status": "observed",
+      "inputs": [
+        {
+          "id": "input-0",
+          "name": "WorkflowRequest",
+          "description": "WorkflowRequest"
+        }
+      ],
+      "validations": [],
+      "operations": [
+        {
+          "id": "op-0",
+          "title": "handle_workflow",
+          "origin": "imported",
+          "description": "Call handle_workflow",
+          "show": true,
+          "calls": {
+            "component": "be.handle_workflow",
+            "type": "call",
+            "label": "handle_workflow",
+            "evidence": "app/features/workflows/router.py"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "output-0",
+          "name": "WorkflowResponse",
+          "description": "WorkflowResponse"
+        }
+      ],
+      "attributes": {
+        "endpoint": "POST /api/workflows"
+      },
+      "step_change": "added"
+    },
+    {
+      "id": "be.handle_workflow",
+      "name": "handle_workflow",
+      "kind": "function",
+      "side": "backend",
+      "layer": "handler",
+      "description": "STEP-1 handle_workflow component",
+      "flows": [
+        "workflows"
+      ],
+      "source": {
+        "file": "app/features/workflows/handlers/handle_workflow.py",
+        "symbol": "handle_workflow",
+        "revision": "step-01",
+        "lines": [
+          1,
+          45
+        ]
+      },
+      "owner": "workflows",
+      "component_reason": "Typed independent boundary",
+      "status": "observed",
+      "inputs": [
+        {
+          "id": "input-0",
+          "name": "request_text",
+          "description": "request_text"
+        }
+      ],
+      "validations": [],
+      "operations": [
+        {
+          "id": "op-0",
+          "title": "service_workflow",
+          "origin": "imported",
+          "description": "Call service_workflow",
+          "show": true,
+          "calls": {
+            "component": "be.service_workflow",
+            "type": "call",
+            "label": "service_workflow",
+            "evidence": "app/features/workflows/handlers/handle_workflow.py"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "output-0",
+          "name": "status",
+          "description": "status"
+        },
+        {
+          "id": "output-1",
+          "name": "detail",
+          "description": "detail"
+        }
+      ],
+      "attributes": {},
+      "step_change": "added"
+    },
+    {
+      "id": "be.service_workflow",
+      "name": "service_workflow",
+      "kind": "function",
+      "side": "backend",
+      "layer": "service",
+      "description": "STEP-1 service_workflow component",
+      "flows": [
+        "workflows"
+      ],
+      "source": {
+        "file": "app/features/workflows/services/service_workflow.py",
+        "symbol": "service_workflow",
+        "revision": "step-01",
+        "lines": [
+          1,
+          45
+        ]
+      },
+      "owner": "workflows",
+      "component_reason": "Typed independent boundary",
+      "status": "observed",
+      "inputs": [
+        {
+          "id": "input-0",
+          "name": "request_text",
+          "description": "request_text"
+        }
+      ],
+      "validations": [],
+      "operations": [],
+      "outputs": [
+        {
+          "id": "output-0",
+          "name": "detail",
+          "description": "detail"
+        }
+      ],
+      "attributes": {},
+      "step_change": "added"
+    }
+  ],
+  "dependencies": [],
+  "unresolved": []
+}
