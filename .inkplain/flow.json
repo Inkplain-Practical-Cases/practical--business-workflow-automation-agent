@@ -1,0 +1,40 @@
+{
+  "practical_case": {
+    "id": "0e6UnE7YabSHy5SfWE2i",
+    "slug": "business-workflow-automation-agent",
+    "name": "Business Workflow Automation Agent"
+  },
+  "current": "intro",
+  "stages": {
+    "intro": {
+      "status": "in_progress",
+      "summary": "Starter FDE case created with mapped profile skills and seven detailed Introduction sections; MCP readback confirmed. Cover image and final Stage 1 review remain before done.",
+      "outputs": {
+        "intro_sections": 7,
+        "portal_url": "/practical-case/business-workflow-automation-agent",
+        "cover_pending": true
+      },
+      "started_at": "2026-10-10T06:51:19.853Z",
+      "finished_at": null,
+      "updated_by": "api-key:for-chatgpt-test-2"
+    },
+    "repo": {
+      "status": "done",
+      "summary": "Six cumulative STEP branches and final main with FINAL.crd and README committed; 7/7 GitHub Actions matrix jobs success. Educational local MCP-style adapter, not claimed live MCP transport.",
+      "outputs": {
+        "repo_url": "https://github.com/Inkplain-Practical-Cases/practical--business-workflow-automation-agent",
+        "steps_created": 3,
+        "steps_required": 6,
+        "step_2_crd_verified": true,
+        "crd_readback_through": 3,
+        "steps": 6,
+        "ci_jobs_success": 7,
+        "ci_jobs_total": 7
+      },
+      "started_at": "2026-10-10T06:54:39.971Z",
+      "finished_at": "2026-10-10T07:34:29.923Z",
+      "updated_by": "api-key:for-chatgpt-test-2"
+    }
+  },
+  "updated_at": "2026-10-10T07:34:29.923Z"
+}
