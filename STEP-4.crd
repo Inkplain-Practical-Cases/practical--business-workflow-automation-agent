@@ -2,7 +2,7 @@
   "version": "1.0",
   "name": "Workflow STEP-1",
   "source": {
-    "revision": "step-03-connect-mcp-client-to-tool-service"
+    "revision": "step-04-orchestrate-approval-gated-operations"
   },
   "flows": [
     {
@@ -11,11 +11,11 @@
     }
   ],
   "step": {
-    "no": 3,
+    "no": 4,
     "of": 6,
-    "title": "Add core domain state",
-    "branch": "step-03-connect-mcp-client-to-tool-service",
-    "previous": "STEP-2.crd",
+    "title": "Add domain workflow",
+    "branch": "step-04-orchestrate-approval-gated-operations",
+    "previous": "STEP-3.crd",
     "removed": []
   },
   "components": [
@@ -253,6 +253,34 @@
       },
       "owner": "workflows",
       "component_reason": "Separately executable persistence/business unit",
+      "status": "observed",
+      "inputs": [],
+      "validations": [],
+      "operations": [],
+      "outputs": [],
+      "attributes": {},
+      "step_change": "unchanged"
+    },
+    {
+      "id": "be.step4_domain",
+      "name": "step4_domain",
+      "kind": "function",
+      "side": "backend",
+      "layer": "service",
+      "description": "Domain-specific guarded business operation",
+      "flows": [
+        "workflows"
+      ],
+      "source": {
+        "file": "app/features/workflows/services/approval_orchestrator.py",
+        "symbol": "domain operation",
+        "lines": [
+          1,
+          50
+        ]
+      },
+      "owner": "workflows",
+      "component_reason": "Independently verifiable business capability",
       "status": "observed",
       "inputs": [],
       "validations": [],
