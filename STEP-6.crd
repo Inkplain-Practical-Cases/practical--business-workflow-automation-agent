@@ -2,7 +2,7 @@
   "version": "1.0",
   "name": "Workflow STEP-1",
   "source": {
-    "revision": "step-05-handle-retries-authorization-and-audit"
+    "revision": "step-06-verify-workflow-observability-and-ci"
   },
   "flows": [
     {
@@ -11,11 +11,11 @@
     }
   ],
   "step": {
-    "no": 5,
+    "no": 6,
     "of": 6,
-    "title": "Implement reliability policy",
-    "branch": "step-05-handle-retries-authorization-and-audit",
-    "previous": "STEP-4.crd",
+    "title": "Harden and integrate domain capabilities",
+    "branch": "step-06-verify-workflow-observability-and-ci",
+    "previous": "STEP-5.crd",
     "removed": []
   },
   "components": [
@@ -309,6 +309,34 @@
       },
       "owner": "workflows",
       "component_reason": "Independent correctness/reliability rule",
+      "status": "observed",
+      "inputs": [],
+      "validations": [],
+      "operations": [],
+      "outputs": [],
+      "attributes": {},
+      "step_change": "unchanged"
+    },
+    {
+      "id": "be.end_to_end",
+      "name": "end_to_end",
+      "kind": "function",
+      "side": "backend",
+      "layer": "service",
+      "description": "Composes cumulative domain capabilities while retaining stated fixture limitations",
+      "flows": [
+        "workflows"
+      ],
+      "source": {
+        "file": "app/features/workflows/services/end_to_end.py",
+        "symbol": "domain flow",
+        "lines": [
+          1,
+          60
+        ]
+      },
+      "owner": "workflows",
+      "component_reason": "Business-wide integration boundary",
       "status": "observed",
       "inputs": [],
       "validations": [],
