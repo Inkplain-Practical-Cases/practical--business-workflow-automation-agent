@@ -48,7 +48,7 @@
     },
     "inkp": {
       "status": "done",
-      "summary": "Six ordered Simulator STEP tabs committed on main; Process Executor links checked by get_inkp_summary with zero missing linked docs.",
+      "summary": "Added STEP-6-ERD generated entity diagram (two entities, one FK) to main .inkp, and FINAL.erd.",
       "outputs": {
         "inkp_path": "business-workflow-automation-agent.inkp",
         "inkp_url": "https://github.com/Inkplain-Practical-Cases/practical--business-workflow-automation-agent/blob/main/business-workflow-automation-agent.inkp",
@@ -60,7 +60,15 @@
           "STEP-5",
           "STEP-6"
         ],
-        "linked_docs_verified": 33
+        "linked_docs_verified": 33,
+        "erd_audit_complete": true,
+        "erd_applicable_steps": [
+          6
+        ],
+        "erd_lessons_created": 1,
+        "erd_not_applicable": false,
+        "erd_item_title": "Database (Entity) Relations",
+        "erd_readback": true
       },
       "started_at": "2026-10-10T07:42:50.749Z",
       "finished_at": "2026-10-10T07:42:50.749Z",
@@ -91,5 +99,5 @@
       "updated_by": "api-key:for-chatgpt-test-2"
     }
   },
-  "updated_at": "2026-10-13T15:40:50.991Z"
+  "updated_at": "2026-10-13T15:40:57.107Z"
 }
