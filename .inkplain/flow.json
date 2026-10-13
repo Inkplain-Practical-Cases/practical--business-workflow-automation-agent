@@ -23,7 +23,7 @@
     },
     "repo": {
       "status": "done",
-      "summary": "Six cumulative STEP branches and final main with FINAL.crd and README committed; 7/7 GitHub Actions matrix jobs success. Educational local MCP-style adapter, not claimed live MCP transport.",
+      "summary": "Updated STEP-6 cumulative application with SQLite relational persistence; committed STEP-6.erd, source and regression test.",
       "outputs": {
         "repo_url": "https://github.com/Inkplain-Practical-Cases/practical--business-workflow-automation-agent",
         "steps_created": 3,
@@ -32,7 +32,15 @@
         "crd_readback_through": 3,
         "steps": 6,
         "ci_jobs_success": 7,
-        "ci_jobs_total": 7
+        "ci_jobs_total": 7,
+        "erd_audit_complete": true,
+        "erd_applicable_steps": [
+          6
+        ],
+        "erd_lessons_created": 1,
+        "erd_not_applicable": false,
+        "erd_item_title": "Database (Entity) Relations",
+        "erd_readback": true
       },
       "started_at": "2026-10-10T06:54:39.971Z",
       "finished_at": "2026-10-10T07:34:29.923Z",
@@ -83,5 +91,5 @@
       "updated_by": "api-key:for-chatgpt-test-2"
     }
   },
-  "updated_at": "2026-10-13T15:13:36.315Z"
+  "updated_at": "2026-10-13T15:40:50.991Z"
 }
