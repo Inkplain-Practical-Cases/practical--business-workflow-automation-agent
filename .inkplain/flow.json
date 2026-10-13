@@ -60,7 +60,7 @@
     },
     "content": {
       "status": "done",
-      "summary": "Portal Stage 4 completed: 8 active categories and 45 active case lessons (18 Overview with 16 source-backed What-is, 6 STEP categories x 4 items, 3 Conclusion). Structural MCP read-back confirmed counts and six INKP tabs with no missing executor links; representative lessons inspected for CRD, source-code, GitHub and 4M content. Production-integration limitations remain explicit in tutorials.",
+      "summary": "Source-backed persistence audit completed: MCP-style local tool registry and returned audit dictionary; no durable workflow tables, collections or files. Therefore no STEP-N.erd, ERD tabs or Database lesson is warranted.",
       "outputs": {
         "categories_created": 8,
         "items_target": 45,
@@ -70,12 +70,18 @@
         "step_items": 24,
         "theory_items": 16,
         "conclusion_items": 3,
-        "structural_qa": true
+        "structural_qa": true,
+        "erd_audit_complete": true,
+        "erd_applicable_steps": [],
+        "erd_not_applicable": true,
+        "erd_lessons_created": 0,
+        "erd_item_title": "Database (Entity) Relations",
+        "erd_audit_note": "MCP-style local tool registry and returned audit dictionary; no durable workflow tables, collections or files."
       },
       "started_at": "2026-10-10T07:51:02.023Z",
       "finished_at": "2026-10-10T10:14:32.841Z",
       "updated_by": "api-key:for-chatgpt-test-2"
     }
   },
-  "updated_at": "2026-10-10T10:14:32.841Z"
+  "updated_at": "2026-10-13T15:13:36.315Z"
 }
