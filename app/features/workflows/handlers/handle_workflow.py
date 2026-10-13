@@ -1,13 +1,12 @@
-"""Handler: forward validated input to domain service.
-ICS layer: handler
-CRD component: be.handle_workflow
-Called by: receive_workflow
-Calls: service_workflow
-Why: separates orchestration from HTTP.
-Without: impossible to evolve business logic independently.
-Step: added in STEP-1.
+"""Handler: forward validated workflow inputs to the domain and audit services.
+
+Requests are recorded after successful service_workflow evaluation.
 """
 from app.features.workflows.services.service_workflow import service_workflow
-def handle_workflow(value: str) -> dict[str,str]:
-    """Coordinate one input value and map a stable response contract."""
-    return {"status": "accepted", "detail": service_workflow(value)}
+from app.features.workflows.services.service_record_workflow import service_record_workflow
+
+def handle_workflow(value: str) -> dict[str, str]:
+    """Coordinate validation, an allowlisted tool summary and durable audit."""
+    detail = service_workflow(value)
+    service_record_workflow(value, "accepted")
+    return {"status": "accepted", "detail": detail}
