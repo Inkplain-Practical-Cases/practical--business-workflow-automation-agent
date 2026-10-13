@@ -1,0 +1,67 @@
+{
+  "erd_version": 1,
+  "name": "business-workflow-automation-agent",
+  "step": "final",
+  "engine": "sqlite",
+  "generated_from": [
+    "app/features/workflows/providers/provider_record_workflow.py",
+    "app/features/workflows/services/service_record_workflow.py",
+    "app/features/workflows/handlers/handle_workflow.py"
+  ],
+  "entities": [
+    {
+      "name": "workflow_requests",
+      "kind": "table",
+      "step_change": "unchanged",
+      "description": "Durable accepted workflow records with privacy-preserving text digests.",
+      "source": "app/features/workflows/providers/provider_record_workflow.py",
+      "fields": [
+        {
+          "name": "id",
+          "type": "TEXT",
+          "key": "PK"
+        },
+        {
+          "name": "request_sha256",
+          "type": "TEXT"
+        },
+        {
+          "name": "status",
+          "type": "TEXT"
+        },
+        {
+          "name": "created_at",
+          "type": "TEXT"
+        }
+      ]
+    },
+    {
+      "name": "workflow_events",
+      "kind": "table",
+      "step_change": "unchanged",
+      "description": "Each accepted event belongs to an existing workflow request.",
+      "source": "app/features/workflows/providers/provider_record_workflow.py",
+      "fields": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "key": "PK"
+        },
+        {
+          "name": "workflow_request_id",
+          "type": "TEXT",
+          "references": "workflow_requests.id"
+        },
+        {
+          "name": "event_type",
+          "type": "TEXT"
+        },
+        {
+          "name": "occurred_at",
+          "type": "TEXT"
+        }
+      ]
+    }
+  ],
+  "relations": []
+}
